@@ -1,0 +1,574 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+::after,::before{
+    box-sizing: border-box;
+}
+.fixwidth_container--pad96{
+    padding-top:96px;
+    padding-bottom: 96px;
+}
+.mrgb10{
+    margin-bottom: 10px;
+    border: 1px solid green;
+    padding: 5px;
+}
+/*-----ANIMATION-----*/
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:3s;
+	-moz-animation-duration:3s;
+	animation-duration:3s;
+}
+
+@-webkit-keyframes slideIn { from { left:-100%; } to { left:0%; } }
+@-moz-keyframes slideIn{ from { left:-100%; } to { left:0%; } }
+@keyframes slideIn { from { left:-100%; } to { left:0%; } }
+
+.slideIn {
+	left:0;  /* make things invisible upon start */
+	-webkit-animation:slideIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:slideIn ease-in 1;
+	animation:slideIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:3s;
+	-moz-animation-duration:3s;
+	animation-duration:3s;
+}
+@-webkit-keyframes slideOut { from { left:100%; } to {  left:0%;  } }
+@-moz-keyframes slideOut{ from { left:100%; } to {  left:0%;  } }
+@keyframes slideOut { from { left:100%; } to {  left:0%;  } }
+
+.slideOut {
+	left:100%;  /* make things invisible upon start */
+	-webkit-animation:slideOut ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:slideOut ease-in 1;
+	animation:slideOut ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:3s;
+	-moz-animation-duration:3s;
+	animation-duration:3s;
+}
+
+/*--------------------*/
+
+/*===============NAVIGATION==================*/
+.bg_primary{
+    background-color: black;
+    color:white;
+}
+li{
+    list-style: none;
+    display:inline-block;  
+}
+nav.navbar a.navbar-brand {
+    background: url(../img/logo.png) no-repeat;
+    background-position: 85px 7px;
+    height: 65px;
+    padding: 10px;
+    background-size: 134px;
+    width: 254px;
+    margin-top: 20px
+}
+.navbar{
+    padding: 27px 10px;
+}
+.navbar-collapse{
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+.nav-item{
+    margin-right: 36px;
+    font-weight: bold;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #feac56;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #feac56;
+}
+.navbar-light .navbar-nav .nav-link{
+    color:white;
+}
+nav .nav-item:last-child{
+    margin-right: 0px;
+}
+.menu-icon {
+    background-color:#feac56 ;
+   
+}
+.navi-right{
+    text-align: right;
+}
+.icon-size{
+    font-size:40px !important;
+    color: #feac56;
+}
+@media(max-width:780px){
+    .navbar-nav{
+        font-size: 15px;
+    }
+    .nav-item{
+        margin-right: 12px;
+    }
+}
+.dropdown-item:hover{
+    color:#feac56;
+    box-shadow:2px rgb(12, 12, 12)
+}
+.logo-size{
+    width:90px;
+    height:100px;
+    margin-top: -35px;
+}
+@media(max-width:700px){
+    nav.navbar a.navbar-brand {
+        background: url(../img/logo.png) no-repeat;
+        background-position: 0px 16px;
+        height: 80px;
+        padding: 10px;
+        background-size: 110px;
+        width: 122px;
+    }
+    .logo-size{
+        width:60px;
+        height:70px;
+        margin-top: -25px;
+    }
+}
+@media (max-width: 991px) {
+    .nav li{
+        margin-right: 20px;
+        
+    }
+    .nav li:last-child{
+        margin-right: 0px;
+    }
+    .nav {
+        font-size: 13px;
+    }
+}
+/*===============NAVIGATION END===============*/
+/*===============CARSOUL END===============*/
+.carousel-img{
+    height:500px
+}
+.carsoul-size{
+    height:500px;
+}
+
+@media (max-width: 991px) {
+    .carsoul-size{
+        height:400px;
+    }
+    .carousel-img{
+        height:400px
+    }
+}
+@media (max-width:778px) {
+    .carsoul-size{
+        height:250px;
+    }
+    .carousel-img{
+        height:250px
+    }
+}
+/*===============CARSOUL END===============*/
+
+/*===============HERO SECTION===============*/
+.hero{
+    background: url(../img/burger3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.intro {
+    text-align: center;
+    position: relative;
+    padding-top: 2rem;
+    left: 0px;
+    font-size: 9rem;
+    font-family: 'Black Ops One', cursive;
+    color:rgb(135, 196, 13);
+   
+}
+.objective{ 
+    color:white;
+    font-size:4rem; 
+    padding:2rem 13rem; 
+    text-align:center; 
+    opacity:0.7;
+    position: relative;
+    font-family: 'Gloria Hallelujah', cursive;
+    color:orangered
+}
+/*.main-content {
+
+    height:100%;
+    width: 100%;
+    background-size: cover;
+    flex:0 1 100%;
+    display:flex;
+    flex-direction: column;
+    padding: 2rem;
+   
+}*/
+@media only screen and (max-width: 768px) {
+    .intro {
+        font-size: 4em;
+    }
+    .objective{
+    padding:2em 1em; 
+       font-size: 1em; 
+    }
+}
+/*===============HERO SECTION END===============*/
+/*===============MENU SECTION ===============*/
+.burger-premi-menu{
+    border: 1px solid #e7e9e8;
+    padding: 40px 30px;
+    font-size: 12px;
+    margin-top:20px;
+    min-height: 250px;;
+    width:100%;
+}
+
+.menu-info{
+    color: #343839;
+    font-weight: bold;
+}
+.menu .burger-premi-menu:last-child{
+    margin-bottom:20px;
+}
+.burger-premi-menu{
+    text-align: center;
+}
+.burger-premi-menu:hover{
+    box-shadow: 0px 0px 10px #d2d7d5;
+}
+.menu {
+    margin-bottom:96px;
+}
+@media only screen and (max-width: 991px) {
+    .menu{
+        margin-bottom: 26px;;
+    }
+}
+/*#########SANDWICH#########*/
+.sandwich, .burger,.shevpav,.combo, .pizza,.beverages{
+   min-height: 150px;
+}
+/*.sandwich{
+    background: url("../img/sd1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+min-height:200px ;}
+.burger{
+    background: url("../img/burger.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.shevpav{
+    background: url("../img/burger.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.pizza{
+    background: url("../img/pizza.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.combo{
+    background: url("../img/combo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+.beverages{
+    background: url("../img/beverages.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}*/
+@media(max-width:991px){
+    .burger-premi-menu{
+        min-height: 150px;
+    }
+}
+@media(max-width:770px){
+    .burger-premi-menu{
+        min-height: 200px;
+    }
+    
+    .menu-info{
+        font-size:13px;
+    }
+    hgroup{
+        padding-left: 15px;
+    }
+}
+/*===============MENU SECTION END===============*/
+/*===============ABOUT SECTION ===============*/
+.phone{
+    color:#feac56;
+    padding-right: 20px;
+}
+/*===============ABOUT SECTION END===============*/
+/*===============LOCATION SECTION ===============*/
+.location-map{
+    text-align: center;
+    padding: 30px;;
+}
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+/*===============LOCATIN SECTION END===============*/
+
+
+/*===============FOOTER SECTION ===============*/
+.footer{
+    border-bottom: 1px solid #323335;  
+    font-family: 'Domine';
+}
+.foot_wrap{
+    color:#717578;  
+}
+.secondary a:hover{
+    color:white;
+}
+.prime_con{
+    position: relative;
+}
+.footer .primary .subscribe{
+    padding:15px;
+    border-radius:40px;
+    padding-right:220px;
+    position: absolute;
+    background: #323335;
+    color:#717578;   
+}
+footer .secondary{
+    margin-top: 0px;
+}
+.secondary h4{
+    color: white;
+    margin-bottom: 36px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-style: normal;
+    font-size:20px;
+}
+.secondary li{
+    margin-bottom:10px;
+    display: block;
+    font-size: 14px;
+}
+.secondary a{
+    color:#717578;
+}
+.footer input[type=text]{
+    padding:15px;
+    border-radius:40px;
+    padding-right:150px;
+    position: absolute;
+    background: #323335;
+    color:#717578;
+    border: none;
+    max-width:400px;
+}
+.prime_con button{
+    position:absolute;
+    top:0px;
+    left: 240px;
+    padding:15px 10px 15px 0px;
+    width:130px;
+    border: none
+}
+.footer .primary .subscribe{
+    padding:15px;
+    border-radius:40px;
+    padding-right:220px;
+    position: absolute;
+    background: #323335;
+    color:#717578;   
+}
+footer .secondary{
+    margin-top: 50px;
+}
+.secondary h4{
+    color: white;
+    margin-bottom: 36px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-style: normal
+}
+.secondary li{
+    margin-bottom:10px;
+    display: block;
+    font-size: 14px;
+    padding-left: 0px;
+} 
+footer ul{
+    padding-left: 0px;;
+}
+.secondary a{
+    color:#717578;
+}
+.footer input[type=text]{
+    padding:15px;
+    border-radius:40px;
+    padding-right:150px;
+    position: absolute;
+    background: #323335;
+    color:#717578;
+    border: none;
+    max-width:400px;
+}
+.prime_con button{
+    position:absolute;
+    top:0px;
+    left: 245px;
+    padding:15px 10px 15px 0px;
+    width:130px;
+    border: none;
+}
+.bgcg{
+    background-color: #16d428;
+    color:white;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.footer .secondary ul li{
+    display:block;
+}
+@media(max-width:991px){
+.prime_con button {
+    position: absolute;
+    top: 0px;
+    left: 164px;
+    padding: 11px 10px 11px 3px;
+    width: 122px;
+    border: none;
+    font-size: 11px;
+}
+.footer input[type=text] {
+    padding: 11px;
+    border-radius: 40px;
+    padding-right: 98px;
+    position: absolute;
+    background: #323335;
+    color: #717578;
+    border: none;
+    font-size: 11px;
+    margin-left: 15px;
+}
+.prime_con{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+.footer h3{
+    font-size: 18px;
+}
+.footer p{
+    font-size: 12px
+}
+.footer h4{
+    font-size: 14px;
+}
+.secondary li {
+    font-size: 10px;
+}
+.copy_right{
+    font-size: 10px;
+    padding-left: 15px;
+}
+
+}
+
+footer h3{
+   margin-bottom: 0px; 
+   margin-top: 5px;
+}
+.bggrey{
+    background: #27282a;
+}
+.mrgb36{
+    margin-bottom: 36px;
+}
+
+/*===============FOOTER SECTION END===============*/
+/*======UTILITY CLASSES======*/
+
+@media(max-width:991px){
+    .fixwidth_container--pad96{
+        padding-top:36px;
+        padding-bottom: 36px;
+    }
+}
+/*======UTILITY CLASSES END======*/
+/*======SANDWICH SECTION=====*/
+.thumbnail{
+    margin-right: 20px;
+  }
+.cover_img{
+    min-height: 10px;
+}
+.textdecoration{
+    text-align: center;
+    padding-top: 50px;
+}
+.ingredients{
+    text-align: center;
+     color:grey;
+}
+@media(max-width:991px){
+    .textdecoration{
+        text-align: center;
+        padding-top: 20px;
+        font-size: 16px;
+    }
+    .ingredients{
+        font-size: 10px;
+    }
+}
+
+/*======SANDWICH SECTION END=====*/
